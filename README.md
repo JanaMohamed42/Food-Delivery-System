@@ -1,7 +1,6 @@
 # Javeats Lite - Food Delivery System
 
 > Javeats Lite is a simplified food delivery platform concept that connects customers with restaurants, enabling browsing, ordering, payments, and delivery tracking.  
-> Javeats Lite هو نموذج مبسط لمنصة توصيل طعام يربط العملاء بالمطاعم، ويتيح التصفح، الطلب، الدفع، وتتبع التوصيل.
 
 ---
 
