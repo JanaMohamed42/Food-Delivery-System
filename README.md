@@ -43,6 +43,7 @@ It covers the entire lifecycle: from **user registration and authentication**, b
 
 ---
 
+
 ## 📂 Database Entities (Detailed Overview)
 
 The database is divided into **modules** for clarity:
@@ -80,7 +81,26 @@ The database is divided into **modules** for clarity:
 - `system_reports`, `restaurant_reports`, `daily_transactions`, `monthly_transactions` → Aggregated reporting  
 
 ---
+## 📂 Database Relationships – Simple Overview
 
+- **Customer — Order (1 : M)**  
+  A customer can place multiple orders.
+
+- **Order — Order_Detail (1 : M)**  
+  Each order can contain multiple items.
+
+- **Menu_Item — Order_Detail (1 : M)**  
+  A menu item can appear in multiple orders.
+
+- **Restaurant — Menu_Item (1 : M)**  
+  Each restaurant can have multiple menu items.
+
+- **Order — Payment (1 : 1 )**  
+  Typically one payment per order
+
+- **Customer — Address (1 : M)**  
+  A customer can register multiple delivery addresses.
+ ---
 ## 📦 Place Order – Diagrams  
 
 The **Place Order** process is documented using three different diagram types to illustrate it from multiple perspectives:  
@@ -88,21 +108,56 @@ The **Place Order** process is documented using three different diagram types to
 ### 🗂️ ERD (Entity Relationship Diagram)  
 Shows the relationships between the main entities involved in placing an order (`order`, `order_items`, `customer`, `payment`, etc.).  
 
-![Place Order ERD](https://github.com/JanaMohamed42/E-Commerce-Practical-Database-Design/blob/main/ERD%20Diagram_%20place%20order.png)
+![Place Order ERD](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/ERD%20Diagram_%20place%20order.png)  
 
 ---
 
 ### 🔄 Flowchart  
 Represents the overall workflow from when the customer places a new order until the restaurant confirms or cancels it.  
 
-![Place Order Flowchart](https://github.com/JanaMohamed42/E-Commerce-Practical-Database-Design/blob/main/Flowchart%20Diagram%20place%20order%20.png)
-
+![Place Order Flowchart](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/Flowchart%20Diagram%20place%20order%20.png)
 
 ---
 
 ### 📐 Sequence Diagram  
 Describes the step-by-step interaction between the **User**, **System**, and **API Endpoints** during the order creation and processing flow.  
 
-![Place Order Sequence Diagram](https://github.com/JanaMohamed42/E-Commerce-Practical-Database-Design/blob/main/sequence%20Diagram%20place%20order.png)
+![Place Order Sequence Diagram](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/sequence%20Diagram%20place%20order.png)  
+
+---
+## 🛒 Place Order – Pseudocode
+
+// 1. Validate Cart
+IF NOT ValidateCart(cartItems) THEN
+    RETURN "Error: Some items are out of stock"
+END IF
+
+// 2. Create new order in Pending state
+orderId = CreateOrder(customerId, cartItems, status="Pending")
+
+// 3. Check payment method
+IF paymentMethod == "Online" THEN
+    
+    // 3.1 Call Payment Gateway
+    paymentResult = SendPaymentRequest(orderId, cartItems.totalAmount)
+
+    IF paymentResult == "Success" THEN
+        UpdateOrderStatus(orderId, "Paid")
+        ReduceStock(cartItems)
+        RETURN "Order Confirmed: Payment Successful"
+    ELSE
+        UpdateOrderStatus(orderId, "Failed")
+        RETURN "Error: Payment Failed"
+    END IF
+
+ELSE IF paymentMethod == "CashOnDelivery" THEN
+    
+    // 3.2 Record Payment as Pending (Cash)
+    InsertPaymentRecord(orderId, method="Cash", status="Pending")
+    RETURN "Order Confirmed: Pay with Cash on Delivery"
+
+ELSE
+    RETURN "Error: Invalid Payment Method"
+END IF
 
 ---
