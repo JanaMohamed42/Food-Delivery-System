@@ -105,3 +105,39 @@ Describes the step-by-step interaction between the **User**, **System**, and **A
 ![Place Order Sequence Diagram](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/sequence%20Diagram%20place%20order.png)  
 
 ---
+## 🛒 Place Order – Pseudocode
+
+// 1. Validate Cart
+IF NOT ValidateCart(cartItems) THEN
+    RETURN "Error: Some items are out of stock"
+END IF
+
+// 2. Create new order in Pending state
+orderId = CreateOrder(customerId, cartItems, status="Pending")
+
+// 3. Check payment method
+IF paymentMethod == "Online" THEN
+    
+    // 3.1 Call Payment Gateway
+    paymentResult = SendPaymentRequest(orderId, cartItems.totalAmount)
+
+    IF paymentResult == "Success" THEN
+        UpdateOrderStatus(orderId, "Paid")
+        ReduceStock(cartItems)
+        RETURN "Order Confirmed: Payment Successful"
+    ELSE
+        UpdateOrderStatus(orderId, "Failed")
+        RETURN "Error: Payment Failed"
+    END IF
+
+ELSE IF paymentMethod == "CashOnDelivery" THEN
+    
+    // 3.2 Record Payment as Pending (Cash)
+    InsertPaymentRecord(orderId, method="Cash", status="Pending")
+    RETURN "Order Confirmed: Pay with Cash on Delivery"
+
+ELSE
+    RETURN "Error: Invalid Payment Method"
+END IF
+
+---
