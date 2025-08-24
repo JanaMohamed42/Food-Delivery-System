@@ -88,21 +88,20 @@ The **Place Order** process is documented using three different diagram types to
 ### 🗂️ ERD (Entity Relationship Diagram)  
 Shows the relationships between the main entities involved in placing an order (`order`, `order_items`, `customer`, `payment`, etc.).  
 
-![Place Order ERD](https://github.com/JanaMohamed42/E-Commerce-Practical-Database-Design/blob/main/ERD%20Diagram_%20place%20order.png)
+![Place Order ERD](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/ERD%20Diagram_%20place%20order.png)  
 
 ---
 
 ### 🔄 Flowchart  
 Represents the overall workflow from when the customer places a new order until the restaurant confirms or cancels it.  
 
-![Place Order Flowchart](https://github.com/JanaMohamed42/E-Commerce-Practical-Database-Design/blob/main/Flowchart%20Diagram%20place%20order%20.png)
-
+![Place Order Flowchart](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/Flowchart%20Diagram%20place%20order%20.png)
 
 ---
 
 ### 📐 Sequence Diagram  
 Describes the step-by-step interaction between the **User**, **System**, and **API Endpoints** during the order creation and processing flow.  
 
-![Place Order Sequence Diagram](https://github.com/JanaMohamed42/E-Commerce-Practical-Database-Design/blob/main/sequence%20Diagram%20place%20order.png)
+![Place Order Sequence Diagram](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/sequence%20Diagram%20place%20order.png)  
 
 ---
