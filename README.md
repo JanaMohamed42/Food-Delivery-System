@@ -115,14 +115,14 @@ Shows the relationships between the main entities involved in placing an order (
 ### 🔄 Flowchart  
 Represents the overall workflow from when the customer places a new order until the restaurant confirms or cancels it.  
 
-![Place Order Flowchart](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/Flowchart%20Diagram%20place%20order%20.png)
+![Place Order Flowchart](https://github.com/JanaMohamed42/Food-Delivery-System/blob/main/Flowchart%20Diagram%20place%20order.png)
 
 ---
 
 ### 📐 Sequence Diagram  
 Describes the step-by-step interaction between the **User**, **System**, and **API Endpoints** during the order creation and processing flow.  
 
-![Place Order Sequence Diagram](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/sequence%20Diagram%20place%20order.png)  
+![Place Order Sequence Diagram](https://github.com/JanaMohamed42/Food-Delivery-System/blob/main/sequence%20Diagram%20place%20order.png)  
 
 ---
 ## 🛒 Place Order – Pseudocode
