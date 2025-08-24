@@ -43,6 +43,7 @@ It covers the entire lifecycle: from **user registration and authentication**, b
 
 ---
 
+
 ## 📂 Database Entities (Detailed Overview)
 
 The database is divided into **modules** for clarity:
@@ -80,7 +81,26 @@ The database is divided into **modules** for clarity:
 - `system_reports`, `restaurant_reports`, `daily_transactions`, `monthly_transactions` → Aggregated reporting  
 
 ---
+## 📂 Database Relationships – Simple Overview
 
+- **Customer — Order (1 : M)**  
+  A customer can place multiple orders.
+
+- **Order — Order_Detail (1 : M)**  
+  Each order can contain multiple items.
+
+- **Menu_Item — Order_Detail (1 : M)**  
+  A menu item can appear in multiple orders.
+
+- **Restaurant — Menu_Item (1 : M)**  
+  Each restaurant can have multiple menu items.
+
+- **Order — Payment (1 : 1 )**  
+  Typically one payment per order
+
+- **Customer — Address (1 : M)**  
+  A customer can register multiple delivery addresses.
+ ---
 ## 📦 Place Order – Diagrams  
 
 The **Place Order** process is documented using three different diagram types to illustrate it from multiple perspectives:  
