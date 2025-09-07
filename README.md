@@ -161,3 +161,24 @@ ELSE
 END IF
 
 ---
+# 🛒 Cart Management — Estimation  
+
+| Task            | Type       | Subtask                          | Total Estimate Time (h) | Owner | Progress (%) |
+|-----------------|------------|----------------------------------|-------------------------|-------|--------------|
+| Cart Management | **Database** | Create users table                | 1.2 |   | 0% |
+|                 |            | Create menu_items table           | 1.8 |   | 0% |
+|                 |            | Create cart_items table           | 3.6 |   | 0% |
+|                 |            | Create orders table               | 3.6 |   | 0% |
+|                 |            | Relationships (FKs, constraints) | 2.4 |   | 0% |
+|                 |            | Optimization (Indexes + Perf)    | 1.8 |   | 0% |
+|                 | **Backend**  | Add Item API                     | 4.8 |   | 0% |
+|                 |            | View Cart API                    | 4.8 |   | 0% |
+|                 |            | Update Quantity API              | 3.6 |   | 0% |
+|                 |            | Remove Item API                  | 3.6 |   | 0% |
+|                 |            | Clear Cart API                   | 3.6 |   | 0% |
+|                 |            | Checkout API (cart → order)      | 7.2 |   | 0% |
+|                 |            | Error handling & validation      | 3.6 |   | 0% |
+|                 |            | Integration Tests                | 6   |   | 0% |
+|                 | **🔢 Total Time** | —                            | **≈ 55.6 h (≈ 7 working days)** |   | 0% |
+
+---
