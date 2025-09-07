@@ -162,6 +162,7 @@ END IF
 
 ---
 # 🛒 Cart Management — Estimation  
+
 The following table provides a detailed estimation for **Cart Management**.  
 - Tasks are split into **Database** and **Backend** subtasks.  
 - Each time estimation already includes **testing effort**.  
@@ -169,24 +170,25 @@ The following table provides a detailed estimation for **Cart Management**.
 - Final total reflects a **realistic 7.5 working days** timeline.  
 
 
-| Task            | Type       | Subtask                                               | Total Estimate Time (h) | Owner | Progress (%) |
-|-----------------|------------|-------------------------------------------------------|-------------------------|-------|--------------|
-| Cart Management | **Database** | Create users table                                    | 1.2 |   | 0% |
-|                 |            | Create menu_items table                               | 1.8 |   | 0% |
-|                 |            | Create cart table (id, user_id, created_at)           | 2.4 |   | 0% |
-|                 |            | Create cart_items table (id, cart_id, item_id, quantity, price) | 3.6 |   | 0% |
-|                 |            | Create orders table                                   | 3.6 |   | 0% |
-|                 |            | Relationships (FKs, constraints)                      | 2.4 |   | 0% |
-|                 |            | Optimization (Indexes + Performance)                  | 1.8 |   | 0% |
-|                 | **Backend**  | Add Item API                                         | 4.8 |   | 0% |
-|                 |            | View Cart API                                        | 4.8 |   | 0% |
-|                 |            | **Modify Cart**                                       | —   |   | 0% |
-|                 |            | ├─ Update Quantity API                                | 3.6 |   | 0% |
-|                 |            | ├─ Remove Item API                                    | 3.6 |   | 0% |
-|                 |            | └─ Clear Cart API                                     | 3.6 |   | 0% |
-|                 |            | Checkout API (cart → order)                          | 7.2 |   | 0% |
-|                 |            | Error handling & validation                          | 3.6 |   | 0% |
-|                 |            | Integration Tests                                    | 6   |   | 0% |
-|                 | **🔢 Total Time** | —                                               | **≈ 58 h (≈ 7.5 working days)** |   | 0% |
+| Task            | Type       | Subtask                                               | Total Estimate Time (h) |
+|-----------------|------------|-------------------------------------------------------|-------------------------|
+| Cart Management | **Database** | Create users table                                    | 1.2 |
+|                 |            | Create menu_items table                               | 1.8 |
+|                 |            | Create cart table (id, user_id, created_at)           | 2.4 |
+|                 |            | Create cart_items table (id, cart_id, item_id, quantity, price) | 3.6 |
+|                 |            | Create orders table                                   | 3.6 |
+|                 |            | Relationships (FKs, constraints)                      | 2.4 |
+|                 |            | Optimization (Indexes + Performance)                  | 1.8 |
+|                 | **Backend**  | Add Item API                                         | 4.8 |
+|                 |            | View Cart API                                        | 4.8 |
+|                 |            | **Modify Cart**                                       | —   |
+|                 |            | ├─ Update Quantity API                                | 3.6 |
+|                 |            | ├─ Remove Item API                                    | 3.6 |
+|                 |            | └─ Clear Cart API                                     | 3.6 |
+|                 |            | Checkout API (cart → order)                          | 7.2 |
+|                 |            | Error handling & validation                          | 3.6 |
+|                 |            | Integration Tests                                    | 6   |
+|                 | **🔢 Total Time** | —                                               | **≈ 58 h (≈ 7.5 working days)** |
+
 
 ---
