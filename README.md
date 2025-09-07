@@ -162,6 +162,12 @@ END IF
 
 ---
 # 🛒 Cart Management — Estimation  
+The following table provides a detailed estimation for **Cart Management**.  
+- Tasks are split into **Database** and **Backend** subtasks.  
+- Each time estimation already includes **testing effort**.  
+- A **20% buffer** has been added to cover real-world factors (unexpected discussions, small blockers, integration issues).  
+- Final total reflects a **realistic 7.5 working days** timeline.  
+
 
 | Task            | Type       | Subtask                                               | Total Estimate Time (h) | Owner | Progress (%) |
 |-----------------|------------|-------------------------------------------------------|-------------------------|-------|--------------|
