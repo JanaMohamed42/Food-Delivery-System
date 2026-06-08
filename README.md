@@ -1,3 +1,8 @@
+<img width="833" height="842" alt="checkout-order-flowchart" src="https://github.com/user-attachments/assets/bf8705ef-79b2-4767-a7bd-3e287b7fdda8" />
+<img width="490" height="368" alt="Auth flowchart (2)" src="https://github.com/user-attachments/assets/0369f45b-f9c1-44b4-80aa-502a065c418b" />
+<img width="311" height="291" alt="Auth flowchart" src="https://github.com/user-attachments/assets/8d1cba0a-4cea-4290-84d4-1e23983a7e0f" />
+<img width="1328" height="912" alt="place-order-erd" src="https://github.com/user-attachments/assets/7ce9df00-1f63-430a-8915-b86be4d7f651" />
+<img width="2106" height="1648" alt="food-deliver-system-scheme" src="https://github.com/user-attachments/assets/d1f52700-420f-4656-91fe-7f431a93a394" />
 # Javeats Lite - Food Delivery System
 
 > Javeats Lite is a simplified food delivery platform concept that connects customers with restaurants, enabling browsing, ordering, payments, and delivery tracking.  
