@@ -165,7 +165,7 @@ The workflow from cart to order confirmation.
 ##  Sequence Diagram
 The step-by-step interaction between **User**, **System**, and **API Endpoints** during the order creation process.
 
-![Place Order Sequence Diagram](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/place-order-sequence.png)
+<img width="917" height="1201" alt="place-order-sequence" src="https://github.com/user-attachments/assets/ae1c89ab-13f2-46dd-8f27-363dae152720" />
 
 ---
 
