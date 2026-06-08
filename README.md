@@ -101,25 +101,44 @@ The database is divided into **modules** for clarity:
 - **Customer — Address (1 : M)**  
   A customer can register multiple delivery addresses.
  ---
-## 📦 Place Order – Diagrams  
+## 📦  Diagrams  
 
-The **Place Order** process is documented using three different diagram types to illustrate it from multiple perspectives:  
+The  process is documented using  different diagram types to illustrate it from multiple perspectives:  
 
-### 🗂️ ERD (Entity Relationship Diagram)  
-Shows the relationships between the main entities involved in placing an order (`order`, `order_items`, `customer`, `payment`, etc.).  
+## 📊 ERD (Entity Relationship Diagram)
+Shows the relationships between the main entities in the food delivery system.
 
-![Place Order ERD](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/ERD%20Diagram_%20place%20order.png)  
-
----
-
-### 🔄 Flowchart  
-Represents the overall workflow from when the customer places a new order until the restaurant confirms or cancels it.  
-
-![Place Order Flowchart](https://github.com/JanaMohamed42/Food-Delivery-System/blob/main/Flowchart%20Diagram%20place%20order.png)
+![Place Order ERD](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/place-order-erd.png)
 
 ---
 
-### 📐 Sequence Diagram  
+## 🔄 Flowcharts
+
+### 1. Authentication Flowchart
+The workflow for user authentication (login/signup).
+
+![Auth Flowchart](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/Auth%20flowchart.png)
+
+### 2. Checkout Order Flowchart
+The workflow from cart to order confirmation.
+
+![Checkout Order Flowchart](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/checkout-order-flowchart.png)
+
+---
+
+## 📐 Sequence Diagram
+The step-by-step interaction between **User**, **System**, and **API Endpoints** during the order creation process.
+
+![Place Order Sequence Diagram](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/place-order-sequence.png)
+
+---
+
+## 🏗️ System Scheme
+An overview of the entire food delivery system architecture.
+
+![Food Delivery System Scheme](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/food-deliver-system-scheme.png)
+
+### 📐Place order Sequence Diagram  
 Describes the step-by-step interaction between the **User**, **System**, and **API Endpoints** during the order creation and processing flow.  
 
 ![Place Order Sequence Diagram](https://github.com/JanaMohamed42/Food-Delivery-System/blob/main/sequence%20Diagram%20place%20order.png)  
