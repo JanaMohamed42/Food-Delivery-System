@@ -117,7 +117,9 @@ docker compose up -d
 # Follow application logs
 docker compose logs -f app
 
-#  Food Delivery System – API Design
+---
+
+##  Food Delivery System – API Design
 
 This project defines the **functional requirements, database entities, and API endpoints** for a food delivery application.  
 It covers the entire lifecycle: from **user registration and authentication**, browsing restaurants, managing menus, handling carts & orders, to **payments, offers, and dashboards**.
