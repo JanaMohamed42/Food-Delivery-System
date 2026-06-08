@@ -1,8 +1,4 @@
-<img width="833" height="842" alt="checkout-order-flowchart" src="https://github.com/user-attachments/assets/bf8705ef-79b2-4767-a7bd-3e287b7fdda8" />
-<img width="490" height="368" alt="Auth flowchart (2)" src="https://github.com/user-attachments/assets/0369f45b-f9c1-44b4-80aa-502a065c418b" />
-<img width="311" height="291" alt="Auth flowchart" src="https://github.com/user-attachments/assets/8d1cba0a-4cea-4290-84d4-1e23983a7e0f" />
-<img width="1328" height="912" alt="place-order-erd" src="https://github.com/user-attachments/assets/7ce9df00-1f63-430a-8915-b86be4d7f651" />
-<img width="2106" height="1648" alt="food-deliver-system-scheme" src="https://github.com/user-attachments/assets/d1f52700-420f-4656-91fe-7f431a93a394" />
+
 # Javeats Lite - Food Delivery System
 
 > Javeats Lite is a simplified food delivery platform concept that connects customers with restaurants, enabling browsing, ordering, payments, and delivery tracking.  
@@ -18,21 +14,48 @@
 ---
 
 ## Future Work
-- Implement backend REST API using Node.js / Express.
+- Implement backend REST API using JAVA/Spring .
 - Create a responsive frontend interface for customers and restaurants.
 - Integrate with real-world payment gateways (e.g., Stripe, PayPal).
 - Add real-time delivery tracking with WebSockets.
 - Implement authentication and authorization with JWT.
+---
+
+##  Project Goals
+
+| # | Goal | Description |
+|---|------|-------------|
+| 1 |  Document system features | Organize and explain all system features in a structured way |
+| 2 |  Model using UML diagrams | Create ERD, Flowcharts, Sequence Diagrams, and System Scheme |
+| 3 |  Define requirements | Document both functional (what) and non-functional (how well) requirements |
+| 4 |  Build a prototype | Develop a working prototype that demonstrates core functionality |
 
 ---
-# 🍔 Food Delivery System – API Design
+## 📑 Table of Contents
+
+README.md – Project overview & main documentation
+
+docs/ – Project documentation
+
+- requirements/ – Features & functionalities of each module
+- diagrams/ – Use case, sequence, and class diagrams
+- srs/ – System Requirement Specification (optional)
+
+src/ – Source code (future implementation)
+
+- backend/ – Server-side logic & APIs
+
+  ---
+
+#  Food Delivery System – API Design
 
 This project defines the **functional requirements, database entities, and API endpoints** for a food delivery application.  
 It covers the entire lifecycle: from **user registration and authentication**, browsing restaurants, managing menus, handling carts & orders, to **payments, offers, and dashboards**.
 
 ---
 
-## 🚀 Features & Functionalities
+
+##  Features & Functionalities
 
 | # | Feature                          | Functions                                                                                  | Example API Endpoints |
 |---|----------------------------------|--------------------------------------------------------------------------------------------|-----------------------|
@@ -49,44 +72,44 @@ It covers the entire lifecycle: from **user registration and authentication**, b
 ---
 
 
-## 📂 Database Entities (Detailed Overview)
+##  Database Entities (Detailed Overview)
 
 The database is divided into **modules** for clarity:
 
-### 👤 Users & Roles
+###  Users & Roles
 - `user` → Basic user details (name, email, password, phone)  
 - `role` → Defines system roles (Admin, Manager, Customer)  
 - `user_role`, `group`, `group_role`, `user_group` → Manage role-based access and group permissions  
 
-### 🍴 Restaurants & Menus
+###  Restaurants & Menus
 - `restaurant` → Core details (name, address, status)  
 - `restaurant_category` → Classifies restaurants by cuisine/type  
 - `menu`, `menu_category`, `menu_item`, `ingredient` → Full menu hierarchy  
 
-### 🛒 Cart & Orders
+###  Cart & Orders
 - `cart`, `cart_items` → User’s current cart and its items  
 - `order`, `order_details`, `order_history`, `order_status`, `order_archive` → Full order lifecycle (from placement to archive)  
 
-### 💳 Payments
+###  Payments
 - `payment_setting` → User preferences for payment methods  
 - `transaction`, `transaction_details`, `transaction_status` → Core payment tracking  
 - `payment_integration_type`, `payment_integration_configuration` → 3rd-party gateway setup  
 - `transaction_history`, `auditing` → Logs for compliance and debugging  
 
-### 👥 Customers
+###  Customers
 - `customer` → Customer-specific profile  
 - `address` → Multiple delivery addresses  
 - `inquiry` → Customer support tickets  
 - `review`, `comments` → Feedback & ratings  
 
-### 🎁 Offers & Promotions
+###  Offers & Promotions
 - `offers`, `promotions` → Discounts, coupons, campaigns  
 
-### 📊 Reports & Analytics
+###  Reports & Analytics
 - `system_reports`, `restaurant_reports`, `daily_transactions`, `monthly_transactions` → Aggregated reporting  
 
 ---
-## 📂 Database Relationships – Simple Overview
+##  Database Relationships – Simple Overview
 
 - **Customer — Order (1 : M)**  
   A customer can place multiple orders.
@@ -106,40 +129,40 @@ The database is divided into **modules** for clarity:
 - **Customer — Address (1 : M)**  
   A customer can register multiple delivery addresses.
  ---
-## 📦  Diagrams 
+##   Diagrams 
 
 The  process is documented using  different diagram types to illustrate it from multiple perspectives:  
 
 
-## 🏗️ System Scheme
+##  System Scheme
 An overview of the entire food delivery system architecture.
 
-![Food Delivery System Scheme](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/food-deliver-system-scheme.png)
+<img width="2106" height="1648" alt="food-deliver-system-scheme" src="https://github.com/user-attachments/assets/d1f52700-420f-4656-91fe-7f431a93a394" />
 
-## 📊 ERD (Entity Relationship Diagram)
+##  ERD (Entity Relationship Diagram)
 Shows the relationships between the main entities in the food delivery system.
 
-![Place Order ERD](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/place-order-erd.png)
+<img width="1328" height="912" alt="place-order-erd" src="https://github.com/user-attachments/assets/7ce9df00-1f63-430a-8915-b86be4d7f651" />
 
 ---
 
-## 🔄 Flowcharts
+##  Flowcharts
 
 ### 1. Authentication Flowchart
 The workflow for user authentication (login/signup).
 
-![Auth Flowchart](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/Auth%20flowchart.png)
+<img width="311" height="291" alt="Auth flowchart" src="https://github.com/user-attachments/assets/8d1cba0a-4cea-4290-84d4-1e23983a7e0f" />
 
-![Auth Flowchart 2](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/Auth%20flowchart%20(2).png)
+<img width="490" height="368" alt="Auth flowchart (2)" src="https://github.com/user-attachments/assets/0369f45b-f9c1-44b4-80aa-502a065c418b" />
 
 ### 2. Checkout Order Flowchart
 The workflow from cart to order confirmation.
 
-![Checkout Order Flowchart](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/checkout-order-flowchart.png)
+<img width="833" height="842" alt="checkout-order-flowchart" src="https://github.com/user-attachments/assets/bf8705ef-79b2-4767-a7bd-3e287b7fdda8" />
 
 ---
 
-## 📐 Sequence Diagram
+##  Sequence Diagram
 The step-by-step interaction between **User**, **System**, and **API Endpoints** during the order creation process.
 
 ![Place Order Sequence Diagram](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/place-order-sequence.png)
@@ -188,35 +211,4 @@ ELSE
     RETURN "Error: Invalid Payment Method"
 END IF
 
----
-# 🛒 Cart Management — Estimation  
 
-The following table provides a detailed estimation for **Cart Management**.  
-- Tasks are split into **Database** and **Backend** subtasks.  
-- Each time estimation already includes **testing effort**.  
-- A **20% buffer** has been added to cover real-world factors (unexpected discussions, small blockers, integration issues).  
-- Final total reflects a **realistic 7.5 working days** timeline.  
-
-
-| Task            | Type       | Subtask                                               | Total Estimate Time (h) |
-|-----------------|------------|-------------------------------------------------------|-------------------------|
-| Cart Management | **Database** | Create users table                                    | 1.2 |
-|                 |            | Create menu_items table                               | 1.8 |
-|                 |            | Create cart table (id, user_id, created_at)           | 2.4 |
-|                 |            | Create cart_items table (id, cart_id, item_id, quantity, price) | 3.6 |
-|                 |            | Create orders table                                   | 3.6 |
-|                 |            | Relationships (FKs, constraints)                      | 2.4 |
-|                 |            | Optimization (Indexes + Performance)                  | 1.8 |
-|                 | **Backend**  | Add Item API                                         | 4.8 |
-|                 |            | View Cart API                                        | 4.8 |
-|                 |            | **Modify Cart**                                       | —   |
-|                 |            | ├─ Update Quantity API                                | 3.6 |
-|                 |            | ├─ Remove Item API                                    | 3.6 |
-|                 |            | └─ Clear Cart API                                     | 3.6 |
-|                 |            | Checkout API (cart → order)                          | 7.2 |
-|                 |            | Error handling & validation                          | 3.6 |
-|                 |            | Integration Tests                                    | 6   |
-|                 | **🔢 Total Time** | —                                               | **≈ 58 h (≈ 7.5 working days)** |
-
-
----
