@@ -50,6 +50,20 @@ src/ – Source code (future implementation)
 
 The project follows a layered architecture with clear separation of concerns:
 
+src/main/java/com/fooddelivery/
+├── controller/ ← REST endpoints (HTTP layer) - Receives requests from clients
+├── service/ ← Business logic - Handles core application rules
+├── repository/ ← JPA interfaces (data layer) - Communicates with database
+├── entity/ ← DB entities + Cart (Redis POJO) - Maps to database tables
+├── dto/
+│ ├── request/ ← Validated request bodies - What client sends
+│ └── response/ ← Consistent API output shapes - What client receives
+├── mapper/ ← MapStruct mappers - Converts Entity ↔ DTO automatically
+├── enums/ ← OrderStatus, RestaurantCategory - Fixed value constants
+├── exception/ ← Custom exceptions - Project-specific errors
+│ └── handler/ ← GlobalExceptionHandler (@ControllerAdvice) - Catches all errors
+└── config/ ← RedisConfig - Configuration classes
+
 ### Layer Responsibilities
 
 | Layer | Path | What it does |
@@ -88,38 +102,24 @@ The project follows a layered architecture with clear separation of concerns:
 - HikariCP connection pool (pre-configured)
 
 ---
+## Prerequisites
 
-
-### Prerequisites
-
-Before you begin, make sure you have the following installed:
-
-| Tool | Minimum Version | Why |
-|------|----------------|-----|
-| Docker & Docker Compose | Latest | Run the entire stack in containers |
-| Java | 17+ | Run the Spring Boot application |
-| Maven | 3.9+ | Build and manage dependencies |
-
-### Full Docker Compose (Recommended)
-
-This option runs everything (app + database + redis) in containers.
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/food-delivery.git
-
-# Navigate to project folder
-cd food-delivery
-
-# Start all services (app, database, redis)
-docker compose up -d
-
-# Follow application logs
-docker compose logs -f app
+- Java 17+
+- Maven 3.6+
+- Docker
 
 ---
 
-##  Food Delivery System – API Design
+## Docker Support
+
+### Running with Docker:
+
+```bash
+docker-compose up -d
+
+---
+
+#  Food Delivery System – API Design
 
 This project defines the **functional requirements, database entities, and API endpoints** for a food delivery application.  
 It covers the entire lifecycle: from **user registration and authentication**, browsing restaurants, managing menus, handling carts & orders, to **payments, offers, and dashboards**.
