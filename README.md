@@ -101,9 +101,15 @@ The database is divided into **modules** for clarity:
 - **Customer — Address (1 : M)**  
   A customer can register multiple delivery addresses.
  ---
-## 📦  Diagrams  
+## 📦  Diagrams 
 
 The  process is documented using  different diagram types to illustrate it from multiple perspectives:  
+
+
+## 🏗️ System Scheme
+An overview of the entire food delivery system architecture.
+
+![Food Delivery System Scheme](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/food-deliver-system-scheme.png)
 
 ## 📊 ERD (Entity Relationship Diagram)
 Shows the relationships between the main entities in the food delivery system.
@@ -119,6 +125,8 @@ The workflow for user authentication (login/signup).
 
 ![Auth Flowchart](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/Auth%20flowchart.png)
 
+![Auth Flowchart 2](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/Auth%20flowchart%20(2).png)
+
 ### 2. Checkout Order Flowchart
 The workflow from cart to order confirmation.
 
@@ -133,10 +141,6 @@ The step-by-step interaction between **User**, **System**, and **API Endpoints**
 
 ---
 
-## 🏗️ System Scheme
-An overview of the entire food delivery system architecture.
-
-![Food Delivery System Scheme](https://raw.githubusercontent.com/JanaMohamed42/Food-Delivery-System/main/food-deliver-system-scheme.png)
 
 ### 📐Place order Sequence Diagram  
 Describes the step-by-step interaction between the **User**, **System**, and **API Endpoints** during the order creation and processing flow.  
