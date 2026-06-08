@@ -1,7 +1,7 @@
 
-# Javeats Lite - Food Delivery System
+# Spring Boot - Food Delivery System
 
-> Javeats Lite is a simplified food delivery platform concept that connects customers with restaurants, enabling browsing, ordering, payments, and delivery tracking.  
+> Javeats Lite is  food delivery platform concept that connects customers with restaurants, enabling browsing, ordering, payments, and delivery tracking.  
 
 ---
 
@@ -46,6 +46,76 @@ src/ – Source code (future implementation)
 - backend/ – Server-side logic & APIs
 
   ---
+  ## Architecture
+
+The project follows a layered architecture with clear separation of concerns:
+
+### Layer Responsibilities
+
+| Layer | Path | What it does |
+|-------|------|--------------|
+| Controller | controller/ | Receives HTTP requests, validates input, calls service layer |
+| Service | service/ | Contains business logic, handles transactions, coordinates repositories |
+| Repository | repository/ | JPA interfaces for database CRUD operations |
+| Entity | entity/ | Maps Java objects to database tables |
+| DTO Request | dto/request/ | Defines expected request structure with validation |
+| DTO Response | dto/response/ | Defines consistent API response format |
+| Mapper | mapper/ | Automatically converts Entity ↔ DTO (using MapStruct) |
+| Enums | enums/ | Fixed values like OrderStatus (PENDING, CONFIRMED, DELIVERED) |
+| Exception | exception/ | Custom exceptions for specific scenarios |
+| Handler | exception/handler/ | Global exception handler (@ControllerAdvice) |
+| Config | config/ | Configuration classes (Redis, Security, etc.) |
+
+### Tech Stack & Why
+
+| Layer | Technology | Purpose |
+|-------|------------|---------|
+| API | Spring Boot REST | Exposes HTTP endpoints for clients |
+| Mapping | MapStruct | Zero-boilerplate Entity ↔ DTO conversion |
+| Cart Storage | Redis | In-memory cart storage with automatic TTL expiry |
+| Database | PostgreSQL / MySQL | Persistent storage for orders, users, restaurants |
+| ORM | Hibernate + JPA | Manages database operations with ddl-auto=update |
+| Connection Pool | HikariCP | Fastest connection pool (pre-configured) |
+| Containerization | Docker + Docker Compose | One-command environment setup |
+| Security | Non-root user in Docker | Prevents privilege escalation |
+
+### Tech choices at a glance
+
+- MapStruct for zero-boilerplate entity ↔ DTO mapping
+- Redis for cart storage with automatic TTL expiry
+- Hibernate with ddl-auto=update for schema management
+- Multi-stage Dockerfile with non-root user for security
+- HikariCP connection pool (pre-configured)
+
+---
+
+
+### Prerequisites
+
+Before you begin, make sure you have the following installed:
+
+| Tool | Minimum Version | Why |
+|------|----------------|-----|
+| Docker & Docker Compose | Latest | Run the entire stack in containers |
+| Java | 17+ | Run the Spring Boot application |
+| Maven | 3.9+ | Build and manage dependencies |
+
+### Full Docker Compose (Recommended)
+
+This option runs everything (app + database + redis) in containers.
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/food-delivery.git
+
+# Navigate to project folder
+cd food-delivery
+
+# Start all services (app, database, redis)
+docker compose up -d
+
+# Follow application logs
+docker compose logs -f app
 
 #  Food Delivery System – API Design
 
