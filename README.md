@@ -4,6 +4,11 @@
 > Javeats Lite is  food delivery platform concept that connects customers with restaurants, enabling browsing, ordering, payments, and delivery tracking.  
 
 ---
+## Prerequisites
+
+- Java 17+
+- Maven 3.6+
+- Docker
 
 ## Notes
 - **Feature**: A high-level capability of the system derived from the use case diagram. Each feature represents a core business area of the platform.
@@ -100,13 +105,6 @@ src/main/java/com/fooddelivery/
 - Hibernate with ddl-auto=update for schema management
 - Multi-stage Dockerfile with non-root user for security
 - HikariCP connection pool (pre-configured)
-
----
-## Prerequisites
-
-- Java 17+
-- Maven 3.6+
-- Docker
 
 ---
 
