@@ -110,14 +110,6 @@ src/main/java/com/fooddelivery/
 
 ---
 
-## Docker Support
-
-### Running with Docker:
-
-```bash
-docker-compose up -d
-
----
 
 #  Food Delivery System – API Design
 
